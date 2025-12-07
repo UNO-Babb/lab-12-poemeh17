@@ -16,7 +16,7 @@ def main():
   random.seed(2020) # This makes sure that the random list will be the same every time.
 
 
-  numberTerms = 10000
+  numberTerms = 1000
 
   orderedList = []
   reversedList = []
@@ -30,27 +30,31 @@ def main():
   # Run each of the sorts in different python sessions.
   # The sorts are bubbleSort, bubbleSortEarlyExit, selectionSort, insertionSort, and mergeSort
 
-  print("Begin Sorting %d elements." % numberTerms)
+
+
 
   startTime = time.time()
-  AllSorts.bubbleSort(orderedList)
+  AllSorts.mergeSort(orderedList)
   endTime = time.time()
   elapsedTime = endTime - startTime
   print("Ordered list time: %.5f seconds" % elapsedTime)
 
   startTime = time.time()
-  AllSorts.bubbleSort(reversedList)
+  AllSorts.mergeSort(reversedList)
   endTime = time.time()
   elapsedTime = endTime - startTime
   print("Reversed list time: %.5f seconds" % elapsedTime)
 
   startTime = time.time()
-  AllSorts.bubbleSort(randomList)
+  AllSorts.mergeSort(randomList)
   endTime = time.time()
   elapsedTime = endTime - startTime
   print("Random list time: %.5f seconds" % elapsedTime)
 
   print("Sorting Complete")
+
+
+
 
 
 if __name__ == '__main__':
